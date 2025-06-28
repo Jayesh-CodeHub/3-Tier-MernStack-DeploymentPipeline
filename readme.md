@@ -1,8 +1,4 @@
 
----
-
-### ✅ `README.md` – **DevPulse** (React + Flask + MongoDB + Docker + GitHub Actions)
-
 # 🚀 DevPulse – Realtime Productivity Tracker
 
 DevPulse is a full-stack, containerized productivity tracker that captures real-time user activity using a React frontend, Flask backend with Socket.IO, and MongoDB for persistence. Built with DevOps principles in mind, it supports Docker Compose for orchestration and CI/CD deployment using GitHub Actions to AWS EC2.
@@ -188,13 +184,4 @@ This project is licensed under the MIT License.
 ```
 
 ---
-
-## ✅ Let Me Know If You Want:
-
-- A screenshot for the aesthetic section
-- Badges (CI passing, Docker build, etc.)
-- A public GitHub repo scaffolding
-- A downloadable ZIP of everything
-
-
 
