@@ -149,15 +149,7 @@ pytest test_app.py
 | ----------- | -------------------------------------------------------------- |
 | `MONGO_URI` | MongoDB connection string. In Docker: `mongodb://mongo:27017/` |
 
----
 
-## 💅 Aesthetic UI Preview
-
-> Custom styling includes glassmorphism, glowing neon buttons, and dark theme UI.
-
-![screenshot](link-to-screenshot-if-hosted)
-
----
 
 ## 📌 Future Improvements
 
@@ -170,9 +162,8 @@ pytest test_app.py
 
 ## 👨‍💻 Author
 
-**Jay Tripathi**
+**Jayesh Tripathi**
 DevOps Engineer & Python Automation Developer
-📧 [LinkedIn](www.linkedin.com/in/jayesh-tripathi-3582691a9)
 📦 Project hosted on: [GitHub](https://github.com/Jayesh-CodeHub/3-Tier-MernStack-DeploymentPipeline.git)
 
 ---
