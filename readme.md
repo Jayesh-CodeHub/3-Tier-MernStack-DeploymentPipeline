@@ -172,8 +172,8 @@ pytest test_app.py
 
 **Jay Tripathi**
 DevOps Engineer & Python Automation Developer
-📧 [LinkedIn](https://linkedin.com/in/your-profile)
-📦 Project hosted on: [GitHub](https://github.com/your-username/devpulse)
+📧 [LinkedIn](www.linkedin.com/in/jayesh-tripathi-3582691a9)
+📦 Project hosted on: [GitHub](https://github.com/Jayesh-CodeHub/3-Tier-MernStack-DeploymentPipeline.git)
 
 ---
 
