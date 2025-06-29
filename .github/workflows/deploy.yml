@@ -19,45 +19,37 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.ssh_host }} >> ~/.ssh/known_hosts
 
-    - name: Connect to EC2 - Install Docker & Deploy App
+    - name: connect to ec2 - install docker - check version
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.user_name }}@${{ secrets.ssh_host }} << 'EOF'
           echo "======= ✅ Connected to EC2 ======="
-
-          # Install Docker
           sudo apt update -y
           sudo apt install docker.io -y
           sudo systemctl start docker
           sudo systemctl enable docker
           docker --version
 
-          # Install Docker Compose
           echo "======= ⚙️ Installing Docker Compose ======="
           sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
           docker-compose --version
 
-          # Clone or update project
           echo "======= 📦 Cloning or Updating Project ======="
           if [ ! -d "my-app-dir" ]; then
-            git clone https://github.com/Jayesh-CodeHub/3-Tier-MernStack-DeploymentPipeline.git my-app-dir
+            git clone https://github.com/your-username/your-repo-name.git my-app-dir
           else
-            cd my-app-dir
-            git pull origin master
-            cd ..
+            echo "📁 Project already exists, pulling latest changes..."
+            cd my-app-dir && git pull origin main && cd ..
           fi
 
-          # Go to project dir
+          echo "======= 🚀 Starting App with Docker Compose ======="
           cd my-app-dir
 
-          # Check for docker-compose.yml
           if [ ! -f docker-compose.yml ]; then
             echo "❌ docker-compose.yml not found!"
             exit 1
           fi
 
-          # Run Docker Compose
-          echo "======= 🚀 Starting App with Docker Compose ======="
-          docker-compose down
-          docker-compose up --build -d
+          sudo docker-compose down
+          sudo docker-compose up --build -d
         EOF
