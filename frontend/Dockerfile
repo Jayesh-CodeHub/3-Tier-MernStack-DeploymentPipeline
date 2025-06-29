@@ -1,10 +1,9 @@
-# frontend/Dockerfile
 FROM node:18
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install && chmod -R 755 node_modules
 
 COPY . .
 
