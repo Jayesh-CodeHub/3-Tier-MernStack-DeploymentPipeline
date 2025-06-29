@@ -40,7 +40,7 @@ jobs:
           # Clone or update project
           echo "======= 📦 Cloning or Updating Project ======="
           if [ ! -d "my-app-dir" ]; then
-            git clone https://github.com/your-username/your-repo-name.git my-app-dir
+            git clone https://github.com/Jayesh-CodeHub/3-Tier-MernStack-DeploymentPipeline.git my-app-dir
           else
             cd my-app-dir
             git pull origin master
